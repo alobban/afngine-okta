@@ -26,5 +26,6 @@ Then run:
     $ npm install -g http-server
 
 Finally to run the app:
+	
 	$ http-server ./app/ -p 8000
 
