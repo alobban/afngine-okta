@@ -1,0 +1,65 @@
+<header layout="column">
+    <md-toolbar>
+        <div ng-show="!vm.search || !searchBtnVisible" class="md-toolbar-tools">
+            <!--<md-button id="icon_menu" aria-label="Toggle">-->
+                <!--<ng-md-icon icon="menu" size="40"></ng-md-icon>-->
+            <!--</md-button>-->
+            <!--<md-button id="icon_chev_right" class="md-icon-button" aria-label="expand">-->
+                <!--<ng-md-icon icon="chevron_right" size="40"></ng-md-icon>-->
+            <!--</md-button>-->
+            <img id="afn-logo" src="../../assets/AFN_Logo_RedWhiteTransparent.png" alt="AFN LOGO">
+            <span flex></span>
+            <div id="profile">
+                    <md-button id="icon_acc_circle" class="md-fab md-mini" aria-label="profile">
+                    <ng-md-icon icon="account_circle" size="46"></ng-md-icon>
+                </md-button>
+                <md-button aria-label="account" ng-if="isAuthenticated" ng-click="vm.logout()">
+                    Log Out
+                </md-button>
+                <md-button aria-label="account" ng-if="!isAuthenticated" ng-click="vm.login()">
+                    Log In
+                </md-button>
+            </div>
+            <md-button ng-if="isAuthenticated && searchBtnVisible" ng-click="vm.iSearch()">
+                <ng-md-icon icon="search"></ng-md-icon>
+                <span>Search</span>
+            </md-button>
+        </div>
+        <div ng-show="vm.search && searchBtnVisible" class="md-toolbar-tools search-bar">
+            <md-button class="md-icon-button" aria-label="Open Search">
+                <ng-md-icon icon="search"></ng-md-icon>
+            </md-button>
+
+            <md-autocomplete
+                    md-selected-item="vm.selectedItem"
+                    md-selected-item-change="vm.selectedItemChange(item)"
+                    md-search-text="vm.searchText"
+                    md-items="item in vm.getMatches(vm.searchText)"
+                    md-item-text="item.attributes.load_id"
+                    md-min-length="vm.minQueryLength"
+                    placeholder="Enter your search information"
+                    md-autofocus
+                    flex
+            >
+                <md-item-template>
+                    <!--<md-button ng-click="vm.getLoadTasks(item.attributes.load_id)">-->
+                        <span
+                            title="{{item.attributes.driver_name}} {{item.attributes.driver_number}} {{item.attributes.carrier}} ({{item.attributes.load_id}})"
+                            md-highlight-text="vm.searchText"
+                            md-highlight-flags="i"
+                        >
+                            {{item.attributes.driver_name}} {{item.attributes.driver_number}} {{item.attributes.carrier}} ({{item.attributes.load_id}})
+                        </span>
+                    <!--</md-button>-->
+                </md-item-template>
+                <md-not-found>
+                    No carrier matching "{{vm.searchText}}" were found.
+                </md-not-found>
+            </md-autocomplete>
+
+            <md-button class="md-icon-button" ng-click="vm.endSearch()" aria-label="Close Search">
+                <ng-md-icon icon="close"></ng-md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+</header>

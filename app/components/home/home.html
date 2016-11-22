@@ -1,0 +1,7 @@
+<div ng-if="!vm.authorized">
+    <h1 class="homepage">You are currently not Authenticated!!</h1>
+</div>
+<div ng-if="vm.authorized">
+    <h1 class="homepage">Welcome {{vm.profile.name}}! <br>You are currently Authenticated!!</h1>
+</div>
+<div id="okta-login-container"></div>

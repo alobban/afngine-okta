@@ -1,0 +1,322 @@
+/*
+  Theme and Colors
+*/
+$primary: #1D4F91;
+$secondary: #DE1F26;
+$background: #9e9e9e;
+$edge: #777;
+$black: #000;
+$white: #FFF;
+
+$urgent: #DE1F26;
+$take-action: #ffcc00;
+$coming-soon: #1D4F91;
+$task-card-divider: #808080;
+
+/*
+  Flag Colors
+*/
+$edi_compliance: #DE1F26;
+$high_risk: #8BBD6A;
+$tracking: #5B9BD5;
+$security: #FFDC73;
+$carrier_team: #ED7D31;
+$reefer: #AFABAB;
+$lock: #483D8B; // #CD853F;
+$snooze: #8B008B;
+
+/* app css stylesheet */
+/* app css stylesheet */
+html, body {
+  font-family: "Roboto";
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+}
+
+/*    Home Page   */
+.homepage {
+  text-align: center;
+}
+
+/*    Login Bar   */
+#afn-logo {
+  margin: 0 auto;
+  max-height: 3rem;
+  max-width: 3rem;
+}
+
+#loginbar {
+  /*margin-bottom: 0.5rem;*/
+}
+
+#search-field input {
+  border-radius: 16px;
+  border-style: none;
+}
+
+#profile {
+  position: relative;
+  right: 0.25rem;
+}
+
+#icon_acc_circle {
+  position: relative;
+  background-color: #9e9e9e;
+  right: -2rem;
+  ng-md-icon {
+    position: relative;
+    top: -0.75rem;
+    right: 0.7rem;
+  }
+}
+
+
+/*    Okta Sign In Widget  */
+.okta-sign-in-header.auth-header {
+  background-color: $primary;
+  .auth-org-logo {
+    max-height: 80px;
+  }
+}
+
+
+/*    Search Bar    */
+.search-bar {
+  /*background-color: #DE1F26;*/
+}
+
+/*    Side Nav    */
+#side_nav {
+  /*min-width: 20rem;*/
+  /*flex: 1 1 10%;*/
+  display: none;
+}
+
+/*
+        Main
+*/
+#main {
+  flex: 1 1 90%;
+}
+
+
+/*      Swim Lane Cue Colors        */
+
+.urgent {
+  color: $urgent;
+}
+
+.takeAction {
+  color: $take-action;
+}
+
+.comingSoon {
+  color: $coming-soon;
+}
+
+/*
+        Task Filters Buttons
+*/
+
+.task-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.task-filter-btn {
+  flex: 0 0 15%;
+}
+
+button.task-filter-btn.md-button.md-raised {
+  text-transform: capitalize;
+}
+
+/*
+        Task Filter Dialog
+*/
+md-dialog[aria-label="Filter Options"] {
+  width: 60%;
+  height: 70%;
+  input {
+    width: 25rem;
+  }
+}
+
+
+.gen-flex-col {
+  padding: 0 10%;
+  margin: 0;
+  display: flex;
+}
+
+.flex-items {
+  flex: 1 1 auto;
+}
+
+md-switch.flex-items {
+  margin: 0 0 0 0.5rem;
+}
+
+h2.flex-items {
+  font-size: 18px;
+}
+
+/*      Card Task       */
+.swimlanes {
+  /*text-align: center;*/
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.task-card-header {
+  font-size: 1rem;
+}
+
+.margin-8 {
+  /*margin: 8px;*/
+}
+
+.sl-container {
+  /*overflow: hidden;*/
+}
+
+.sl-header {
+  flex: 1 1 auto;
+  margin: 0.5rem;
+}
+
+.sl-content {
+  flex: 1 1 auto;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.task_card {
+  font-size: 10px;
+  ng-md-icon {
+    width: 16px;
+    height: 16px;
+    /*color: #9e9e9e;*/
+  }
+}
+
+.task-flags .flags button.md-button.md-icon-button{
+  cursor: default;
+}
+
+.flex-container-row {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-task-body {
+  margin-top: .8rem;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-container-col {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.task-flags {
+  /*width: 3rem;*/
+  /*border: 1px solid red;*/
+  /*justify-content: center;*/
+  flex-grow: 1;
+}
+
+.task-info {
+  border-right: 1px solid $task-card-divider;
+  flex-grow: 15;
+}
+
+.task-info-margin-bottom {
+  margin-bottom: 0.25rem;
+}
+
+.flags button.md-con-button.md-button.md-ink-ripple {
+  margin: 0;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+}
+
+/*  Flags   */
+
+.flags {
+  .icon-flags {
+    position: relative;
+    top: -0.25rem;
+    right: 0.25rem;
+  }
+  .icon-flags[icon="attach_money"] {
+    color: $high_risk;
+  }
+  .icon-flags[icon="timer"] {
+    color: $edi_compliance;
+  }
+  //.icon-flags[icon="lock_outline"] {
+  //  color: $lock;
+  //}
+  .icon-flags[icon="lock_open"] {
+    color: $lock;
+  }
+  .icon-flags[icon="notifications_paused"] {
+    color: $snooze;
+  }
+}
+
+.isHighRisk {
+  /*color: #DE1F26;*/
+}
+
+.isHighValue {
+  /*color: #255500;*/
+}
+
+.isCompliant {
+  /*color: #1D4F91;*/
+  /*color: #948600;*/
+}
+
+.font-size-20 {
+  font-size: 1.25rem;
+  color: $black;
+  font-weight: 400;
+  position: relative;
+  bottom: -5px;
+}
+
+.fontSize14 {
+  font-size: 14px;
+  /*white-space: nowrap;*/
+}
+
+.no-overflow-tasks {
+  height: 1.75rem;
+  overflow: hidden;
+}
+
+/**
+  Media Queries for Responsive Design
+ */
+@media only screen and (min-width: 1600px) {
+  .fontSize14 {
+    white-space: nowrap;
+  }
+}
+

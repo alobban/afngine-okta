@@ -1,0 +1,278 @@
+/*
+  Theme and Colors
+*/
+/*
+  Flag Colors
+*/
+/* app css stylesheet */
+/* app css stylesheet */
+html, body {
+  font-family: "Roboto";
+  height: 100%; }
+
+body {
+  overflow: hidden; }
+
+/*    Home Page   */
+.homepage {
+  text-align: center; }
+
+/*    Login Bar   */
+#afn-logo {
+  margin: 0 auto;
+  max-height: 3rem;
+  max-width: 3rem; }
+
+#loginbar {
+  /*margin-bottom: 0.5rem;*/ }
+
+#search-field input {
+  border-radius: 16px;
+  border-style: none; }
+
+#profile {
+  position: relative;
+  right: 0.25rem; }
+
+#icon_acc_circle {
+  position: relative;
+  background-color: #9e9e9e;
+  right: -2rem; }
+  #icon_acc_circle ng-md-icon {
+    position: relative;
+    top: -0.75rem;
+    right: 0.7rem; }
+
+/*    Okta Sign In Widget  */
+.okta-sign-in-header.auth-header {
+  background-color: #1D4F91; }
+  .okta-sign-in-header.auth-header .auth-org-logo {
+    max-height: 80px; }
+
+/*    Search Bar    */
+.search-bar {
+  /*background-color: #DE1F26;*/ }
+
+/*    Side Nav    */
+#side_nav {
+  /*min-width: 20rem;*/
+  /*flex: 1 1 10%;*/
+  display: none; }
+
+/*
+        Main
+*/
+#main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 90%;
+          flex: 1 1 90%; }
+
+/*      Swim Lane Cue Colors        */
+.urgent {
+  color: #DE1F26; }
+
+.takeAction {
+  color: #ffcc00; }
+
+.comingSoon {
+  color: #1D4F91; }
+
+/*
+        Task Filters Buttons
+*/
+.task-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.task-filter-btn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 15%;
+          flex: 0 0 15%; }
+
+button.task-filter-btn.md-button.md-raised {
+  text-transform: capitalize; }
+
+/*
+        Task Filter Dialog
+*/
+md-dialog[aria-label="Filter Options"] {
+  width: 60%;
+  height: 70%; }
+  md-dialog[aria-label="Filter Options"] input {
+    width: 25rem; }
+
+.gen-flex-col {
+  padding: 0 10%;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-items {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto; }
+
+md-switch.flex-items {
+  margin: 0 0 0 0.5rem; }
+
+h2.flex-items {
+  font-size: 18px; }
+
+/*      Card Task       */
+.swimlanes {
+  /*text-align: center;*/
+  padding: 0;
+  margin: 0;
+  position: relative; }
+
+.task-card-header {
+  font-size: 1rem; }
+
+.margin-8 {
+  /*margin: 8px;*/ }
+
+.sl-container {
+  /*overflow: hidden;*/ }
+
+.sl-header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 0.5rem; }
+
+.sl-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  position: relative;
+  overflow-y: scroll; }
+
+.task_card {
+  font-size: 10px; }
+  .task_card ng-md-icon {
+    width: 16px;
+    height: 16px;
+    /*color: #9e9e9e;*/ }
+
+.task-flags .flags button.md-button.md-icon-button {
+  cursor: default; }
+
+.flex-container-row {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.flex-task-body {
+  margin-top: .8rem;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.flex-container-col {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+
+.task-flags {
+  /*width: 3rem;*/
+  /*border: 1px solid red;*/
+  /*justify-content: center;*/
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.task-info {
+  border-right: 1px solid #808080;
+  -webkit-box-flex: 15;
+      -ms-flex-positive: 15;
+          flex-grow: 15; }
+
+.task-info-margin-bottom {
+  margin-bottom: 0.25rem; }
+
+.flags button.md-con-button.md-button.md-ink-ripple {
+  margin: 0;
+  padding: 0;
+  width: 36px;
+  height: 36px; }
+
+/*  Flags   */
+.flags .icon-flags {
+  position: relative;
+  top: -0.25rem;
+  right: 0.25rem; }
+
+.flags .icon-flags[icon="attach_money"] {
+  color: #8BBD6A; }
+
+.flags .icon-flags[icon="timer"] {
+  color: #DE1F26; }
+
+.flags .icon-flags[icon="lock_open"] {
+  color: #483D8B; }
+
+.flags .icon-flags[icon="notifications_paused"] {
+  color: #8B008B; }
+
+.isHighRisk {
+  /*color: #DE1F26;*/ }
+
+.isHighValue {
+  /*color: #255500;*/ }
+
+.isCompliant {
+  /*color: #1D4F91;*/
+  /*color: #948600;*/ }
+
+.font-size-20 {
+  font-size: 1.25rem;
+  color: #000;
+  font-weight: 400;
+  position: relative;
+  bottom: -5px; }
+
+.fontSize14 {
+  font-size: 14px;
+  /*white-space: nowrap;*/ }
+
+.no-overflow-tasks {
+  height: 1.75rem;
+  overflow: hidden; }
+
+/**
+  Media Queries for Responsive Design
+ */
+@media only screen and (min-width: 1600px) {
+  .fontSize14 {
+    white-space: nowrap; } }

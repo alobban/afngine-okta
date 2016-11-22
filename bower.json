@@ -1,0 +1,24 @@
+{
+  "name": "afngine",
+  "description": "Project formerly known as Sacagawea",
+  "version": "0.0.0",
+  "homepage": "https://bitbucket.org/afnllc/afngine",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-mocks": "~1.5.0",
+    "angular-material": "^1.0.9",
+    "angular-ui-router": "^0.3.1",
+    "angular-material-icons": "^0.7.1",
+    "angular-sanitize": "^1.5.8",
+    "a0-angular-storage": "^0.0.15",
+    "angular-jwt": "^0.0.9",
+    "normalize-css": "^4.2.0",
+    "angular-bootstrap": "^2.1.3",
+    "angular-touch": "^1.5.8",
+    "angular-material-expansion-panel": "^0.7.0",
+    "angular-moment": "^1.0.0",
+    "moment-timezone": "^0.5.9"
+  }
+}
