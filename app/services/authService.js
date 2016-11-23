@@ -91,9 +91,7 @@
             vm.oktaSignIn.signOut();
             store.remove('profile');
             store.remove('id_token');
-            store.remove('lastUrl');
             $rootScope.isAuthenticated = false;
-            $rootScope.$broadcast('killInterval', {});
             $state.go('home');
         }
 
@@ -107,10 +105,6 @@
 
         service.getUser = function() {
             return store.get("profile");
-        };
-
-        service.killInterval = function(promise) {
-            $interval.cancel(promise);
         };
 
         return service;
