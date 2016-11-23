@@ -20,7 +20,7 @@
             logo: 'https://www.loadafn.com/wp-content/uploads/2015/09/AFN_Logo_RedWhite_new-red.png',
             // OIDC options
             clientId: 'vxhos1H0SD0RIZQQSYpf',
-            // redirectUri: 'http://localhost:8000/#/',
+            redirectUri: 'http://localhost/#/',
             authScheme: 'OAUTH2',
             authParams: {
                 responseType: 'id_token',
@@ -68,7 +68,7 @@
                     store.set('id_token', res.idToken);
                     $rootScope.idToken = res.idToken;
                     $rootScope.isAuthenticated = true;
-                    $state.go('dash');
+                    $state.go('home');
                 },
                 function (err) {
                     // handleErrors(err) and $rootScope.isAuthenticated should remain false;
