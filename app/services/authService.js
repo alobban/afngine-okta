@@ -68,7 +68,7 @@
                     store.set('id_token', res.idToken);
                     $rootScope.idToken = res.idToken;
                     $rootScope.isAuthenticated = true;
-                    $state.go('dash');
+                    $state.go('home');
                 },
                 function (err) {
                     // handleErrors(err) and $rootScope.isAuthenticated should remain false;

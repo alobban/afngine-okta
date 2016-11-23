@@ -12,6 +12,7 @@
     function HomeCtrl(authService, $state, $timeout) {
         var vm = this;
         vm.showSearch = false;
+        vm.profile = authService.getUser();
 
         vm.authorized = authService.checkAuth();
         authService.showSearchBtn(vm.showSearch);
